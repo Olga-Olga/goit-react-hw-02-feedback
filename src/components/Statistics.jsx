@@ -1,5 +1,6 @@
 import React from 'react';
 import { Notification } from './Notification';
+import PropTypes from 'prop-types';
 
 export const Statistics = props => {
   console.log(props);
@@ -21,4 +22,12 @@ export const Statistics = props => {
       )}
     </section>
   );
+};
+
+Statistics.propTypes = {
+  good: PropTypes.number.isRequired,
+  neutral: PropTypes.number.isRequired,
+  bad: PropTypes.number.isRequired,
+  total: PropTypes.number,
+  positivePercentage: PropTypes.string,
 };
